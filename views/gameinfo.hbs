@@ -1,0 +1,48 @@
+<link href="/stylesheets/info.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container" style="margin-top: 150px;">
+
+    <div class="container mt-5 mb-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="images p-3">
+                                <div class="text-center p-4">  <img id="main-image" style='height: 100%; width: 100%; object-fit: contain' src="/images/{{resu.gimage}}"
+                                        width="250" /> </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product p-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div style="cursor: pointer" onclick="location.href='/games';" class="d-flex align-items-center"> <i class="fa fa-long-arrow-left"></i> <span
+                                            class="ml-1"> &nbsp; Back</span> </div>
+                                </div>
+                                <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">{{resu.gcat}}</span>
+                                    <h5 class="text-uppercase">{{resu.gname}}</h5>
+                                    <div class="price d-flex flex-row align-items-center"> <span
+                                            class="act-price">RS: {{resu.gprice}}</span>
+                                        <div class="ml-2"> <small class="dis-price"></small> <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="about">{{resu.gdis}}
+                                </p>
+                                <div class="sizes mt-5">
+                                   
+                                </div>
+                                <div class="cart mt-4 align-items-center p-4"> <button
+                                        class="btn btn-danger text-uppercase mr-2 px-4 {{#if pur}}opacity-25{{else}}{{/if}}" onclick="window.location.href = '/games/info/{{resu._id}}/buy';" {{#if pur}} disabled{{else}}{{/if}} > {{#if pur}}Purchased{{else}}Buy Now{{/if}}</button> 
+                                        <button class="btn btn-success text-uppercase mr-2 px-4 {{#if pur}}{{else}}opacity-25{{/if}}" onclick="window.location.href = '/games/info/{{resu._id}}/download';" {{#if pur}} {{else}}disabled{{/if}} >Install</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

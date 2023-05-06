@@ -1,0 +1,62 @@
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-9 col-xl-7">
+                <div class="card rounded-3">
+                    <div class="card-body p-4">
+
+                        <h4 class="text-center my-3 pb-3">Categories</h4>
+
+                        <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2" action="/admin/addcategory" method="post">
+                            <div class="col-12">
+                                <div class="form-outline">
+                                    <input type="text" id="form1" name="cat" class="form-control" />
+                                    <label class="form-label" for="form1">Enter a Category</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+
+                            <div class="col-12">
+
+                            </div>
+                        </form>
+
+                        <table class="table mb-4">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <th scope="col">NO.</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each abc}}
+                                <tr>
+
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                    <td></td>
+                                    <th scope="row">{{@index}}</th>
+                                    <td>{{category}}</td>
+                                    <td>
+                                        <a class="btn btn-danger" href="/admin/deletecategory/{{_id}}" role="button">Delete</a>
+
+                                    </td>
+                                </tr>
+                             {{/each}}
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
